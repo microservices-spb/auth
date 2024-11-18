@@ -1,12 +1,14 @@
 package main
 
 import (
-	"auth-service/internal/rpc"
-	"auth-service/pkg/auth"
 	"fmt"
-	"google.golang.org/grpc"
 	"log"
 	"net"
+
+	"google.golang.org/grpc"
+
+	"github.com/microservices-spb/auth/internal/rpc"
+	"github.com/microservices-spb/auth/pkg/auth"
 )
 
 func main() {

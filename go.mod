@@ -1,4 +1,4 @@
-module auth-service
+module github.com/microservices-spb/auth
 
 go 1.22.8
 

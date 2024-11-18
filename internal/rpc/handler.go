@@ -1,9 +1,9 @@
 package rpc
 
 import (
-	"auth-service/pkg/auth"
 	"context"
 	"fmt"
+	"github.com/microservices-spb/auth/pkg/auth"
 )
 
 type Handler struct {
