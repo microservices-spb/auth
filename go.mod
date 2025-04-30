@@ -3,8 +3,12 @@ module github.com/microservices-spb/auth
 go 1.22.8
 
 require (
+	github.com/jmoiron/sqlx v1.4.0
+	github.com/lib/pq v1.10.9
+	github.com/microservices-spb/gateway v0.0.0-20250326161652-45ea9fc6e296
 	google.golang.org/grpc v1.68.0
 	google.golang.org/protobuf v1.35.1
+//github.com/microservices-spb/gateway latest
 )
 
 require (
