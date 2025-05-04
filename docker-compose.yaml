@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   usersInfoDB:
     container_name: usersInfoDB
@@ -13,6 +11,32 @@ services:
     
     volumes:
       - usersInfoDB-vol:/var/lib/postgresql/data
+
+  gateway:
+    build: ./gateway
+    ports: 
+      - "3111:3111"
+    environment:
+      DB_HOST: usersInfoDB
+      DB_PORT: 5433
+      DB_USER: master
+      DB_PASSWORD: master
+      DB_NAME: usersInfoDB
+    depends_on:
+      - usersInfoDB
+
+  auth:
+    build: C:/Users/khank/go/src/auth
+    ports: 
+      - "3112:3112"
+    environment:
+      DB_HOST: usersInfoDB
+      DB_PORT: 5433
+      DB_USER: master
+      DB_PASSWORD: master
+      DB_NAME: usersInfoDB
+    depends_on:
+      - usersInfoDB
 
 volumes:
   usersInfoDB-vol:

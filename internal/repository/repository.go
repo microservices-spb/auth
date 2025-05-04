@@ -8,7 +8,7 @@ import (
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 
-	"github.com/microservices-spb/gateway/internal/model"
+	"github.com/microservices-spb/auth/internal/model"
 )
 
 type Repository struct {
